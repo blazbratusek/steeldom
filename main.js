@@ -96,7 +96,8 @@
     Wc = r.width; Hc = r.height;
     cv.width = Math.round(Wc * dpr); cv.height = Math.round(Hc * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (Wc < 760) { cx = Wc * 0.62; cy = Hc * 0.36; f = Math.min(Wc * 1.25, Hc * 1.0); alphaMul = 0.4; }
+    if (Wc <= 620) { cx = Wc * 0.5; cy = Hc * 0.47; f = Math.min(Wc * 0.95, Hc * 1.9); alphaMul = 0.85; }
+    else if (Wc < 960) { cx = Wc * 0.72; cy = Hc * 0.36; f = Math.min(Wc * 0.8, Hc * 0.9); alphaMul = 0.45; }
     else { cx = Wc * 0.74; cy = Hc * 0.47; f = Math.min(Wc * 0.62, Hc * 1.1); alphaMul = 1; }
   }
 

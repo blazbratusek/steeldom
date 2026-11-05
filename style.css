@@ -62,8 +62,7 @@ section.dark{background:var(--ink);color:#fff}
 .hero-inner{position:relative;width:100%;display:flex;flex-direction:column;min-height:calc(100svh - 130px);justify-content:space-between;pointer-events:none}
 .hero-inner a,.hero-inner .btn{pointer-events:auto}
 .hero-text{max-width:640px;margin:auto 0}
-.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.03);padding:7px 15px;border-radius:999px;font-size:.84rem;color:#d9dce0;margin-bottom:26px}
-.badge i{width:7px;height:7px;border-radius:50%;background:#3ccf6b;box-shadow:0 0 0 4px rgba(60,207,107,.18)}
+.hero-eyebrow{margin-bottom:22px}
 .hero h1{font-size:clamp(2.2rem,5vw,4.6rem);font-weight:900;text-transform:uppercase}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero p{font-size:1.15rem;color:#b8bdc4;max-width:540px;margin:24px 0 34px}
@@ -189,17 +188,20 @@ footer{background:#0c0d10;color:#8b9097;padding:64px 0 32px;font-size:.9rem}
   .top .wrap{height:64px}
   .logo img{height:24px}
   .nav{inset:64px 0 auto 0}
-  .hero{padding-top:100px}
-  .hero-inner{min-height:calc(100svh - 100px)}
-  .badge{font-size:.8rem;padding:6px 12px;margin-bottom:20px}
-  .hero h1{font-size:clamp(2rem,9.2vw,3rem)}
-  .hero p{font-size:1.04rem;margin:18px 0 26px}
-  .ctas{flex-direction:column;align-items:stretch}
-  .trust{margin-top:40px}
-  .trust li{padding:18px 0 20px}
-  .trust li+li{padding-left:18px}
-  .trust b{font-size:1.3rem}
-  .trust span{font-size:.8rem}
+  .hero{display:block;min-height:0;padding:64px 0 0}
+  #hero-3d{position:relative;inset:auto;height:220px;width:100%;margin-bottom:4px}
+  .hero-inner{min-height:0}
+  .hero-text{margin:0}
+  .hero-eyebrow{margin-bottom:14px}
+  .hero h1{font-size:clamp(1.75rem,8.2vw,2.15rem)}
+  .hero p{font-size:.98rem;margin:14px 0 22px}
+  .ctas{flex-direction:row;gap:10px}
+  .ctas .btn{flex:1;padding:13px 6px;font-size:clamp(.64rem,3.05vw,.76rem);letter-spacing:.03em;white-space:nowrap}
+  .trust{grid-template-columns:repeat(4,1fr);margin-top:34px}
+  .trust li,.trust li:nth-child(n+3){padding:16px 0 20px;border-top:0}
+  .trust li+li,.trust li:nth-child(3){padding-left:12px;border-left:1px solid var(--line-dark)}
+  .trust b{font-size:1.02rem}
+  .trust span{font-size:.68rem;line-height:1.3;margin-top:2px}
   .check{grid-template-columns:1fr}
   .svc-grid,.t-grid,.row{grid-template-columns:1fr}
   .svc:first-child{grid-column:span 1}
