@@ -58,8 +58,8 @@ footer .logo img{height:36px}
 /* Hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--ink);color:#fff;padding:140px 0 90px;overflow:hidden}
 .hero .bg{position:absolute;inset:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.75}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 15%,rgba(19,21,24,.55) 60%,rgba(19,21,24,.2))}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.95}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,21,24,.92) 12%,rgba(19,21,24,.5) 55%,rgba(19,21,24,.05))}
 .hero .wrap{position:relative;width:100%}
 .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:999px;font-size:.85rem;margin-bottom:28px}
 .badge i{width:8px;height:8px;border-radius:50%;background:#3ccf6b;box-shadow:0 0 0 4px rgba(60,207,107,.2)}
@@ -221,7 +221,8 @@ footer{background:#0d0e10;color:#8d9298;padding:70px 0 34px;font-size:.9rem}
   .logo img{height:24px}
   .nav{inset:64px 0 auto 0}
   .hero{min-height:auto;min-height:100svh;padding:110px 0 56px}
-  .hero .bg::after{background:linear-gradient(180deg,rgba(19,21,24,.55),rgba(19,21,24,.85) 55%,var(--ink))}
+  .hero .bg img{object-position:72% center}
+  .hero .bg::after{background:linear-gradient(180deg,rgba(19,21,24,.35),rgba(19,21,24,.75) 50%,rgba(19,21,24,.95))}
   .badge{font-size:.8rem;padding:6px 12px;margin-bottom:20px}
   .hero p{font-size:1.05rem;margin:18px 0 26px}
   .hero .ctas{flex-direction:column;align-items:stretch}
