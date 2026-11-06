@@ -16,6 +16,7 @@
   var grid = document.getElementById('shop-grid');
   if (grid) {
     var list = all.filter(function (p) { return preview || !p.draft; });
+    var lim = +grid.getAttribute('data-limit'); if (lim) list = list.slice(0, lim);
     if (!list.length) {
       grid.innerHTML = '<p class="shop-empty">Izdelke pripravljamo. Za povpraševanje nas <a href="index.html#kontakt">kontaktirajte</a>.</p>';
     } else {
