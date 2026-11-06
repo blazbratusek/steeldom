@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izdelek – STEELDOM</title>
+<meta name="description" content="Vrtno pohištvo STEELDOM">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121418">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="legal-page shop-page">
+<header class="top solid">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="STEELDOM" width="480" height="95"></a>
+    <nav class="nav" aria-label="Glavni meni">
+      <a href="index.html#storitve">Storitve</a>
+      <a href="vrtno-pohistvo.html">Vrtno pohištvo</a>
+      <a href="index.html#vprasanja">Vprašanja</a>
+      <a href="index.html#kontakt" class="btn small">Kontakt</a>
+    </nav>
+    <button class="burger" aria-label="Meni" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="shop">
+  <section class="shop-product"><div class="wrap" id="product"></div></section>
+</main>
+
+<div class="dlg" id="order-dlg" aria-hidden="true">
+  <div class="dlg-box" role="dialog" aria-modal="true" aria-labelledby="order-title">
+    <button type="button" class="dlg-x" data-close aria-label="Zapri">×</button>
+    <h2 id="order-title">Naročilo po predračunu</h2>
+    <p class="dlg-sum" id="order-sum"></p>
+    <form id="order-form" class="order-form">
+      <input type="hidden" name="access_key" value="b0396841-0e2a-41e7-840a-0f9ad65b1908">
+      <input type="hidden" name="subject" value="">
+      <input type="hidden" name="from_name" value="steeldom.si – trgovina">
+      <input type="hidden" name="product"><input type="hidden" name="color"><input type="hidden" name="price">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>Ime in priimek / podjetje*<input name="name" required autocomplete="name"></label>
+        <label>Količina<input name="quantity" type="number" min="1" value="1"></label>
+      </div>
+      <div class="row">
+        <label>E-pošta*<input name="email" type="email" required autocomplete="email"></label>
+        <label>Telefon*<input name="phone" type="tel" required autocomplete="tel"></label>
+      </div>
+      <label>Naslov za dostavo*<input name="address" required autocomplete="street-address" placeholder="Ulica in hišna številka"></label>
+      <div class="row">
+        <label>Poštna številka*<input name="postcode" required autocomplete="postal-code"></label>
+        <label>Kraj*<input name="city" required autocomplete="address-level2"></label>
+      </div>
+      <label>Opomba<textarea name="message" rows="3" placeholder="Npr. ID za DDV za račun podjetju, posebnosti dostave …"></textarea></label>
+      <label class="cb"><input type="checkbox" required><span>Strinjam se s <a href="pogoji.html" target="_blank">splošnimi pogoji</a> in <a href="privacy.html" target="_blank">politiko zasebnosti</a>.</span></label>
+      <div id="order-msg" class="form-msg" role="status"></div>
+      <button type="submit" class="btn">Oddaj naročilo</button>
+      <p class="consent">Naročilo je zavezujoče po plačilu predračuna. Predračun prejmete na e-pošto.</p>
+    </form>
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <div class="f-bottom" style="padding-top:0">
+      <div>Steeldom je blagovna znamka podjetja ARC METAL, Blaž Bratušek s.p., Zgornje Hoče 7, 2311 Hoče · Matična št.: 9418792000 · ID za DDV: SI99750716</div>
+      <div>© <span id="year">2026</span> STEELDOM · <a href="privacy.html">Zasebnost</a> · <a href="impressum.html">Impressum</a></div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+<script src="products.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
