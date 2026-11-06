@@ -143,7 +143,7 @@
     Wc = r.width; Hc = r.height;
     cv.width = Math.round(Wc * dpr); cv.height = Math.round(Hc * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    cx = Wc * 0.5; cy = Hc * 0.44; f = Math.min(Wc * 1.25, Hc * 1.35); alphaMul = 1;
+    if (Wc > 980) { cx = Wc * 0.74; cy = Hc * 0.42; f = Math.min(Wc * 0.62, Hc * 1.05); alphaMul = 0.9; } else { cx = Wc * 0.5; cy = Hc * 0.5; f = Math.min(Wc * 1.1, Hc * 1.3); alphaMul = 1; }
   }
 
   var yaw = 0.7, pitch = -0.38, tx = 0, ty = 0, mx = 0, my = 0, cam = 9;
