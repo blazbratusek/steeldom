@@ -3,34 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>STEELDOM – Jeklena vrata, ograje, stopnice in pergole po meri</title>
-<meta name="description" content="Dvoriščna in drsna vrata, ograje iz jekla in inoxa, jeklene stopnice, pergole in notranja oprema po meri. Brezplačen ogled, 3D prikaz pred izdelavo, 2 leti garancije.">
-<meta name="theme-color" content="#121418">
-<meta property="og:title" content="STEELDOM – Jeklene konstrukcije po meri">
-<meta property="og:description" content="Dvoriščna vrata, ograje, stopnice, pergole in notranja oprema iz jekla – izdelano po meri in zmontirano na vašem objektu.">
+<title>STEELDOM – Vrtno pohištvo in jeklene konstrukcije po meri</title>
+<meta name="description" content="STEELDOM – vrtno pohištvo ter jeklena vrata, ograje, stopnice in pergole po meri. Lastna delavnica, 3D prikaz pred izdelavo, montaža in 2 leti garancije.">
+<meta name="theme-color" content="#f7f4ef">
+<meta property="og:title" content="STEELDOM – Prostor na prostem, izdelan za leta">
+<meta property="og:description" content="Vrtno pohištvo in jeklene konstrukcije po meri za sodobne domove.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://steeldom.si/">
-<meta property="og:image" content="https://steeldom.si/img/vrata.webp">
+<meta property="og:image" content="https://steeldom.si/img/pergola.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"STEELDOM","legalName":"ARC METAL, Blaž Bratušek s.p.","url":"https://steeldom.si","email":"info@steeldom.si","telephone":"+38670557514","address":{"@type":"PostalAddress","streetAddress":"Zgornje Hoče 7","postalCode":"2311","addressLocality":"Hoče","addressCountry":"SI"},"vatID":"SI99750716","areaServed":"SI"}
 </script>
 </head>
-<body>
+<body class="home">
 
 <header class="top">
   <div class="wrap">
-    <a href="#" class="logo"><img src="img/logo.png" alt="STEELDOM" width="480" height="95"></a>
+    <a href="#" class="logo"><img class="l-light" src="img/logo.png" alt="STEELDOM" width="480" height="95"><img class="l-dark" src="img/logo-dark.png" alt="" width="480" height="95"></a>
     <nav class="nav" aria-label="Glavni meni">
+      <a href="vrtno-pohistvo.html">Kolekcija</a>
+      <a href="#po-meri">Po meri</a>
       <a href="#o-nas">O nas</a>
-      <a href="#storitve">Storitve</a>
-      <a href="vrtno-pohistvo.html">Vrtno pohištvo</a>
-      <a href="#postopek">Kako delamo</a>
       <a href="#vprasanja">Vprašanja</a>
-      <a href="#kontakt" class="btn small">Brezplačna ponudba</a>
+      <a href="#kontakt" class="btn small">Kontakt</a>
     </nav>
     <button class="burger" aria-label="Meni" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -38,138 +37,133 @@
 
 <!-- HERO -->
 <section class="hero">
-  <canvas id="hero-3d" aria-hidden="true"></canvas>
+  <div class="hero-bg"><img src="img/pergola.webp" alt="Jeklena pergola nad teraso z jedilno mizo ob sončnem zahodu" width="1312" height="816"></div>
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <div class="eyebrow hero-eyebrow">Sprejemamo nove projekte</div>
-      <h1>Sodobne <em>jeklene</em> konstrukcije</h1>
-      <p>Dvoriščna vrata, ograje, stopnice, pergole in notranja oprema iz jekla in inoxa – izdelano po meri in zmontirano na vašem objektu.</p>
+      <div class="eyebrow light">Bivanje na prostem</div>
+      <h1>Prostor na prostem,<br><em>izdelan za leta.</em></h1>
+      <p>Vrtno pohištvo in jeklene konstrukcije po meri – oblikovano za sodobne domove, izdelano v lastni delavnici.</p>
       <div class="ctas">
-        <a href="#kontakt" class="btn">Brezplačna ponudba</a>
-        <a href="#postopek" class="btn ghost">Kako delamo</a>
+        <a href="vrtno-pohistvo.html" class="btn light">Odkrijte kolekcijo</a>
+        <a href="#po-meri" class="link-arrow light">Izdelava po meri</a>
       </div>
     </div>
-    <ul class="trust">
-      <li><b>0 €</b><span>Ogled in ponudba</span></li>
-      <li><b>3D</b><span>Prikaz pred izdelavo</span></li>
-      <li><b>2 leti</b><span>Garancije</span></li>
-      <li><b>SLO</b><span>Po vsej Sloveniji</span></li>
-    </ul>
+  </div>
+  <ul class="hero-strip wrap">
+    <li>Lastna delavnica</li><li>3D prikaz pred izdelavo</li><li>Montaža na vašem objektu</li><li>2 leti garancije</li>
+  </ul>
+</section>
+
+<!-- KOLEKCIJA -->
+<section id="kolekcija">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">Kolekcija</div>
+        <h2>Vrtno pohištvo</h2>
+        <p class="lead">Garniture za vrt in teraso, izbrane po kakovosti materialov in udobju – z dostavo po vsej Sloveniji.</p>
+      </div>
+      <a href="vrtno-pohistvo.html" class="link-arrow">Celotna kolekcija</a>
+    </div>
+    <div id="shop-grid" class="pgrid-list home-shop" data-limit="3"></div>
+  </div>
+</section>
+
+<!-- PO MERI -->
+<section id="po-meri" class="dark custom">
+  <div class="wrap custom-grid">
+    <div class="custom-text">
+      <div class="eyebrow">Izdelano po meri</div>
+      <h2>Jeklo, oblikovano<br>za vaš prostor</h2>
+      <p class="lead">Vsak projekt začnemo z ogledom in meritvami. Pred izdelavo prejmete 3D prikaz, nato izdelek izdelamo v naši delavnici in ga zmontiramo pri vas.</p>
+      <ol class="custom-list">
+        <li><img src="img/vrata.webp" alt="" loading="lazy"><div><h3>Dvoriščna in drsna vrata</h3><p>Krilna in drsna vrata, usklajena z ograjo, z avtomatiko ali brez.</p></div></li>
+        <li><img src="img/ograja.webp" alt="" loading="lazy"><div><h3>Ograje</h3><p>Balkonske, stopniščne in vrtne ograje iz jekla ali inoxa.</p></div></li>
+        <li><img src="img/stopnice.webp" alt="" loading="lazy"><div><h3>Jeklene stopnice</h3><p>Notranje in zunanje, iz jekla ali v kombinaciji z lesom.</p></div></li>
+        <li><img src="img/pergola.webp" alt="" loading="lazy"><div><h3>Pergole</h3><p>S platnom, senčilom ali lamelami – po meri vaše terase.</p></div></li>
+        <li><img src="img/notranja-oprema.webp" alt="" loading="lazy"><div><h3>Notranja oprema iz jekla</h3><p>Mize, police, drvarniki in predelne stene.</p></div></li>
+      </ol>
+      <a href="#kontakt" class="btn light">Zahtevajte ponudbo</a>
+    </div>
+    <figure class="custom-3d">
+      <canvas id="hero-3d" aria-hidden="true"></canvas>
+      <figcaption>Interaktivni 3D prikaz – takšnega prejmete pred izdelavo.</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- O NAS -->
-<section id="o-nas" class="about">
+<section id="o-nas">
   <div class="wrap about-grid">
     <div class="rv">
       <div class="eyebrow">O nas</div>
-      <h2>Jeklene rešitve za vaš dom</h2>
+      <h2>Slovenska znamka<br>za bivanje na prostem</h2>
     </div>
     <div class="rv">
-      <p class="lead-dark">STEELDOM izdeluje izdelke iz jekla in inoxa po meri za stanovanjske in poslovne objekte – od dvoriščnih vrat in ograj do stopnic, pergol in notranje opreme.</p>
-      <p>Vsak projekt obravnavamo individualno. Pridemo na ogled in vzamemo mere, pripravimo 3D prikaz, nato izdelek izdelamo v delavnici in ga zmontiramo na vašem objektu.</p>
-      <ul class="check">
-        <li>Brezplačen ogled in neobvezujoča ponudba</li>
-        <li>3D prikaz pred izdelavo</li>
-        <li>Izdelava in montaža iz ene roke</li>
-        <li>2 leti garancije na izdelavo in montažo</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- STORITVE -->
-<section id="storitve" class="soft">
-  <div class="wrap">
-    <div class="eyebrow">Storitve</div>
-    <h2>Kaj delamo</h2>
-    <p class="lead">Vse izdelamo po meri – prilagojeno vašemu prostoru, objektu in željam.</p>
-    <div class="svc-grid">
-      <article class="svc rv"><div class="ph"><img src="img/vrata.webp" alt="Jeklena drsna dvoriščna vrata in vrtna vrata med betonskimi stebri" width="1312" height="816" loading="lazy"></div><div class="txt"><div class="num">01</div><h3>Dvoriščna in drsna vrata</h3><p>Krilna in drsna dvoriščna vrata ter vrtna vrata po meri, usklajena z ograjo – z avtomatiko ali brez.</p></div></article>
-      <article class="svc rv"><div class="ph"><img src="img/ograja.webp" alt="Inox balkonska ograja s pogledom na štajerske griče" width="1312" height="816" loading="lazy"></div><div class="txt"><div class="num">02</div><h3>Ograje</h3><p>Balkonske, stopniščne in vrtne ograje iz jekla ali inoxa, v klasični ali sodobni izvedbi.</p></div></article>
-      <article class="svc rv"><div class="ph"><img src="img/stopnice.webp" alt="Jeklene stopnice s hrastovimi stopnicami v sodobni hiši" width="1312" height="816" loading="lazy"></div><div class="txt"><div class="num">03</div><h3>Jeklene stopnice</h3><p>Notranje in zunanje stopnice iz jekla ali v kombinaciji jekla in lesa, izdelane natančno po meri prostora.</p></div></article>
-      <article class="svc rv"><div class="ph"><img src="img/pergola.webp" alt="Jeklena pergola s platnenim senčilom na terasi ob hiši" width="1312" height="816" loading="lazy"></div><div class="txt"><div class="num">04</div><h3>Pergole</h3><p>Sodobne jeklene pergole s senčilom, platnom ali lamelami, ki združujejo zaščito pred soncem in lep videz terase.</p></div></article>
-      <article class="svc rv"><div class="ph"><img src="img/notranja-oprema.webp" alt="Jedilna miza z jekleno konstrukcijo in hrastovo ploščo ter jeklene stenske police" width="1312" height="816" loading="lazy"></div><div class="txt"><div class="num">05</div><h3>Notranja oprema iz jekla</h3><p>Podnožja miz, police, drvarniki, predelne stene in drugi elementi v sodobnem industrijskem slogu.</p></div></article>
-    </div>
-  </div>
-</section>
-
-<!-- VRTNO POHIŠTVO -->
-<section id="trgovina">
-  <div class="wrap">
-    <div class="head-row">
-      <div>
-        <div class="eyebrow">Trgovina</div>
-        <h2>Vrtno pohištvo</h2>
-        <p class="lead">Garniture za vrt in teraso – z dostavo po Sloveniji.</p>
+      <p class="lead-dark">STEELDOM združuje kovinarsko izkušnjo z občutkom za prostor. Izdelujemo jeklene konstrukcije po meri in izbiramo vrtno pohištvo, ki ga z veseljem postavimo tudi na svojo teraso.</p>
+      <div class="values">
+        <div><h3>Lastna delavnica</h3><p>Vse jeklene izdelke izdelamo sami – od reza do zadnjega vara.</p></div>
+        <div><h3>3D prikaz</h3><p>Pred izdelavo natančno vidite, kaj boste dobili.</p></div>
+        <div><h3>Iz ene roke</h3><p>Ogled, izdelava in montaža – brez posrednikov.</p></div>
+        <div><h3>2 leti garancije</h3><p>Na izdelavo in montažo izdelkov po meri.</p></div>
       </div>
-      <a href="vrtno-pohistvo.html" class="btn outline">Vsi izdelki</a>
     </div>
-    <div id="shop-grid" class="pgrid-list home-shop" data-limit="3"></div>
   </div>
 </section>
 
 <!-- POSTOPEK -->
 <section id="postopek" class="soft">
   <div class="wrap">
-    <div class="head-row">
-      <div>
-        <div class="eyebrow">Postopek sodelovanja</div>
-        <h2>Kako poteka sodelovanje</h2>
-        <p class="lead">Od prvega klica do končane montaže – jasno, pregledno in brez presenečenj.</p>
-      </div>
-      <a href="#kontakt" class="btn outline">Začnimo projekt</a>
-    </div>
+    <div class="eyebrow">Postopek</div>
+    <h2>Kako poteka sodelovanje</h2>
     <ol class="steps">
-      <li class="step rv"><span class="step-n">01</span><h3>Povpraševanje</h3><p>Pokličite ali izpolnite obrazec in na kratko opišite, kaj potrebujete.</p></li>
-      <li class="step rv"><span class="step-n">02</span><h3>Ogled in meritve</h3><p>Pridemo na lokacijo, vzamemo mere in skupaj pregledamo možnosti. Ogled je brezplačen.</p></li>
-      <li class="step rv"><span class="step-n">03</span><h3>3D prikaz in ponudba</h3><p>Pripravimo 3D prikaz in brezplačno, neobvezujočo ponudbo.</p></li>
-      <li class="step rv"><span class="step-n">04</span><h3>Izdelava</h3><p>Po potrditvi izdelek izdelamo v naši delavnici – natančno po meri.</p></li>
-      <li class="step rv"><span class="step-n">05</span><h3>Montaža pri vas</h3><p>Izdelek pripeljemo in zmontiramo na vašem objektu. Velja 2 leti garancije.</p></li>
+      <li class="step rv"><span class="step-n">01</span><h3>Povpraševanje</h3><p>Pokličite ali nam pišite in opišite, kaj potrebujete.</p></li>
+      <li class="step rv"><span class="step-n">02</span><h3>Ogled in meritve</h3><p>Pridemo na lokacijo in skupaj pregledamo možnosti. Brezplačno.</p></li>
+      <li class="step rv"><span class="step-n">03</span><h3>3D prikaz in ponudba</h3><p>Pripravimo 3D prikaz in neobvezujočo ponudbo.</p></li>
+      <li class="step rv"><span class="step-n">04</span><h3>Izdelava</h3><p>Izdelek izdelamo v naši delavnici – natančno po meri.</p></li>
+      <li class="step rv"><span class="step-n">05</span><h3>Montaža pri vas</h3><p>Izdelek pripeljemo in zmontiramo na vašem objektu.</p></li>
     </ol>
   </div>
 </section>
 
 <!-- MNENJA -->
-<section id="mnenja" class="soft">
+<section id="mnenja">
   <div class="wrap">
-    <div class="eyebrow">Mnenja naročnikov</div>
-    <h2>Kaj pravijo naši naročniki</h2>
-    <div class="t-grid">
-      <figure class="t rv"><span class="q" aria-hidden="true">“</span><blockquote>Od prvega dogovora do montaže je potekalo vse gladko. Končni rezultat se lepo ujema z objektom.</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
-      <figure class="t rv"><span class="q" aria-hidden="true">“</span><blockquote>Pergola je narejena natančno in izgleda zelo lepo. Komunikacija je bila jasna in korektna.</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
-      <figure class="t rv"><span class="q" aria-hidden="true">“</span><blockquote>Z ograjo smo dobili točno to, kar smo iskali – funkcionalno in estetsko rešitev.</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
+    <div class="eyebrow center">Mnenja naročnikov</div>
+    <div class="quotes">
+      <figure class="rv"><blockquote>»Od prvega dogovora do montaže je potekalo vse gladko. Končni rezultat se lepo ujema z objektom.«</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
+      <figure class="rv"><blockquote>»Pergola je narejena natančno in izgleda zelo lepo. Komunikacija je bila jasna in korektna.«</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
+      <figure class="rv"><blockquote>»Z ograjo smo dobili točno to, kar smo iskali – funkcionalno in estetsko rešitev.«</blockquote><figcaption>Zadovoljen naročnik</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="vprasanja">
+<section id="vprasanja" class="soft">
   <div class="wrap faq-grid">
     <div>
-      <div class="eyebrow">Pogosta vprašanja</div>
-      <h2>Odgovori na vaša vprašanja</h2>
+      <div class="eyebrow">Vprašanja</div>
+      <h2>Pogosta vprašanja</h2>
       <p class="lead">Ne najdete odgovora? Pokličite nas ali pošljite povpraševanje.</p>
     </div>
     <div class="faq">
-      <details><summary>Kje izvajate storitve?</summary><p>Delujemo po vsej Sloveniji. Glede na projekt se lahko dogovorimo tudi za izvedbo na drugih lokacijah.</p></details>
-      <details><summary>Ali je ogled in ponudba res brezplačna?</summary><p>Da. Ogled, meritve in priprava ponudbe so brezplačni in neobvezujoči.</p></details>
-      <details><summary>Ali izdelke tudi zmontirate?</summary><p>Da. Izdelek izdelamo v naši delavnici, ga pripeljemo in zmontiramo na vašem objektu – vse iz ene roke.</p></details>
-      <details><summary>Izdelujete iz jekla ali inoxa?</summary><p>Oboje. Material izberemo skupaj glede na namen, videz in proračun – ograje na primer izdelamo iz jekla ali inoxa.</p></details>
-      <details><summary>Koliko časa traja izvedba?</summary><p>Trajanje je odvisno od obsega in zahtevnosti projekta. Točen rok določimo po ogledu in potrditvi ponudbe.</p></details>
-      <details><summary>Ali potrebujem dovoljenja?</summary><p>V večini primerov dovoljenja niso potrebna. Če so potrebna dodatna soglasja, vas na to pravočasno opozorimo.</p></details>
-      <details><summary>Ali nudite garancijo?</summary><p>Da. Na izdelavo in montažo nudimo 2 leti garancije.</p></details>
+      <details><summary>Kam dostavljate vrtno pohištvo?</summary><p>Po vsej Sloveniji. Dobavni rok in stroški dostave so navedeni pri vsakem izdelku.</p></details>
+      <details><summary>Kako lahko plačam?</summary><p>S plačilno ali kreditno kartico, Apple Pay ali Google Pay, ali po predračunu z nakazilom na račun.</p></details>
+      <details><summary>Ali je ogled za izdelke po meri brezplačen?</summary><p>Da. Ogled, meritve in priprava ponudbe so brezplačni in neobvezujoči.</p></details>
+      <details><summary>Ali izdelke po meri tudi zmontirate?</summary><p>Da. Izdelek izdelamo v naši delavnici, ga pripeljemo in zmontiramo na vašem objektu.</p></details>
+      <details><summary>Izdelujete iz jekla ali inoxa?</summary><p>Oboje. Material izberemo skupaj glede na namen, videz in proračun.</p></details>
+      <details><summary>Kje izvajate storitve?</summary><p>Po vsej Sloveniji, po dogovoru tudi drugje.</p></details>
     </div>
   </div>
 </section>
 
 <!-- KONTAKT -->
-<section id="kontakt" class="dark">
+<section id="kontakt">
   <div class="wrap contact-grid">
     <div>
       <div class="eyebrow">Kontakt</div>
-      <h2>Stopite v stik z nami</h2>
-      <p class="lead">Opišite, kaj potrebujete – odgovorimo v najkrajšem možnem času in se dogovorimo za brezplačen ogled.</p>
+      <h2>Pogovorimo se<br>o vašem prostoru</h2>
+      <p class="lead">Opišite, kaj potrebujete – odgovorimo v najkrajšem času in se dogovorimo za brezplačen ogled.</p>
       <div class="contact-info">
         <a href="tel:+38670557514"><small>Telefon</small><span>+386 70 557 514</span></a>
         <a href="mailto:info@steeldom.si"><small>E-pošta</small><span>info@steeldom.si</span></a>
@@ -187,17 +181,17 @@
       </div>
       <div class="row">
         <label>E-pošta*<input name="email" type="email" required autocomplete="email"></label>
-        <label>Kaj vas zanima
+        <label>Zanima me
           <select name="type" id="f-type">
             <option value="">Izberite …</option>
-            <option>Dvoriščna / drsna vrata</option><option>Ograja</option><option>Stopnice</option><option>Pergola</option><option>Notranja oprema</option><option>Drugo</option>
+            <option>Vrtno pohištvo</option><option>Dvoriščna / drsna vrata</option><option>Ograja</option><option>Stopnice</option><option>Pergola</option><option>Notranja oprema</option><option>Drugo</option>
           </select>
         </label>
       </div>
-      <label>Sporočilo*<textarea name="message" id="f-msg" required placeholder="Opišite projekt: lokacija, okvirne mere, želje …"></textarea></label>
+      <label>Sporočilo*<textarea name="message" id="f-msg" required placeholder="Opišite projekt ali izdelek, ki vas zanima …"></textarea></label>
       <p class="consent">Z oddajo obrazca se strinjate, da vaše podatke uporabimo za odgovor na povpraševanje. Več v <a href="privacy.html">politiki zasebnosti</a>.</p>
       <div id="form-msg" class="form-msg" role="status"></div>
-      <div><button type="submit" class="btn">Pošlji povpraševanje</button></div>
+      <div><button type="submit" class="btn">Pošlji sporočilo</button></div>
     </form>
   </div>
 </section>
@@ -207,8 +201,8 @@
     <div class="f-top">
       <a href="#" class="logo"><img src="img/logo.png" alt="STEELDOM" width="480" height="95"></a>
       <div class="f-links">
-        <a href="#o-nas">O nas</a><a href="#storitve">Storitve</a><a href="#postopek">Kako delamo</a>
-        <a href="#vprasanja">Vprašanja</a><a href="#kontakt">Kontakt</a>
+        <a href="vrtno-pohistvo.html">Kolekcija</a><a href="#po-meri">Po meri</a><a href="#o-nas">O nas</a>
+        <a href="#vprasanja">Vprašanja</a><a href="#kontakt">Kontakt</a><a href="pogoji.html">Pogoji prodaje</a>
       </div>
     </div>
     <div class="f-bottom">

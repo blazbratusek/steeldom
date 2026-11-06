@@ -1,7 +1,7 @@
 (function () {
   // Header background on scroll
   var top = document.querySelector('.top');
-  function onScroll() { if (top && !document.body.classList.contains('legal-page')) top.classList.toggle('solid', window.scrollY > 40); }
+  function onScroll() { if (top && !document.body.classList.contains('sub')) top.classList.toggle('solid', window.scrollY > 60); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -143,9 +143,7 @@
     Wc = r.width; Hc = r.height;
     cv.width = Math.round(Wc * dpr); cv.height = Math.round(Hc * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (Wc <= 620) { cx = Wc * 0.5; cy = Hc * 0.47; f = Math.min(Wc * 0.95, Hc * 1.9); alphaMul = 0.85; }
-    else if (Wc < 960) { cx = Wc * 0.72; cy = Hc * 0.36; f = Math.min(Wc * 0.8, Hc * 0.9); alphaMul = 0.45; }
-    else { cx = Wc * 0.74; cy = Hc * 0.47; f = Math.min(Wc * 0.62, Hc * 1.1); alphaMul = 1; }
+    cx = Wc * 0.5; cy = Hc * 0.44; f = Math.min(Wc * 1.25, Hc * 1.35); alphaMul = 1;
   }
 
   var yaw = 0.7, pitch = -0.38, tx = 0, ty = 0, mx = 0, my = 0, cam = 9;
