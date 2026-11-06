@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://steeldom.si/img/pergola.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"STEELDOM","legalName":"ARC METAL, Blaž Bratušek s.p.","url":"https://steeldom.si","email":"info@steeldom.si","telephone":"+38670557514","address":{"@type":"PostalAddress","streetAddress":"Zgornje Hoče 7","postalCode":"2311","addressLocality":"Hoče","addressCountry":"SI"},"vatID":"SI99750716","areaServed":"SI"}
@@ -25,8 +25,8 @@
   <div class="wrap">
     <a href="#" class="logo"><img class="l-light" src="img/logo.png" alt="STEELDOM" width="480" height="95"><img class="l-dark" src="img/logo-dark.png" alt="" width="480" height="95"></a>
     <nav class="nav" aria-label="Glavni meni">
-      <a href="vrtno-pohistvo.html">Kolekcija</a>
-      <a href="#po-meri">Po meri</a>
+      <a href="vrtno-pohistvo.html" class="nav-shop">Trgovina</a>
+      <a href="#storitve">Storitve po meri</a>
       <a href="#o-nas">O nas</a>
       <a href="#vprasanja">Vprašanja</a>
       <a href="#kontakt" class="btn small">Kontakt</a>
@@ -40,41 +40,47 @@
   <div class="hero-bg"><img src="img/pergola.webp" alt="Jeklena pergola nad teraso z jedilno mizo ob sončnem zahodu" width="1312" height="816"></div>
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <div class="eyebrow light">Bivanje na prostem</div>
-      <h1>Prostor na prostem,<br><em>izdelan za leta.</em></h1>
-      <p>Vrtno pohištvo in jeklene konstrukcije po meri – oblikovano za sodobne domove, izdelano v lastni delavnici.</p>
-      <div class="ctas">
-        <a href="vrtno-pohistvo.html" class="btn light">Odkrijte kolekcijo</a>
-        <a href="#po-meri" class="link-arrow light">Izdelava po meri</a>
-      </div>
+      <h1>Jeklo in vrtno pohištvo<br>za sodoben dom</h1>
+      <p>Kupite vrtno pohištvo v naši spletni trgovini ali naročite jekleno konstrukcijo, izdelano po meri.</p>
+    </div>
+    <div class="paths">
+      <a href="vrtno-pohistvo.html" class="path">
+        <span class="path-tag">Spletna trgovina</span>
+        <span class="path-title">Vrtno pohištvo</span>
+        <span class="path-desc">Garniture za vrt in teraso · dostava po Sloveniji · plačilo s kartico ali po predračunu</span>
+        <span class="path-go">V trgovino →</span>
+      </a>
+      <a href="#storitve" class="path">
+        <span class="path-tag">Storitve po meri</span>
+        <span class="path-title">Vrata, ograje, stopnice, pergole</span>
+        <span class="path-desc">Brezplačen ogled · 3D prikaz pred izdelavo · izdelava in montaža · 2 leti garancije</span>
+        <span class="path-go">Poglej storitve →</span>
+      </a>
     </div>
   </div>
-  <ul class="hero-strip wrap">
-    <li>Lastna delavnica</li><li>3D prikaz pred izdelavo</li><li>Montaža na vašem objektu</li><li>2 leti garancije</li>
-  </ul>
 </section>
 
 <!-- KOLEKCIJA -->
-<section id="kolekcija">
+<section id="trgovina" class="shop-band">
   <div class="wrap">
     <div class="head-row">
       <div>
-        <div class="eyebrow">Kolekcija</div>
+        <div class="eyebrow">Spletna trgovina</div>
         <h2>Vrtno pohištvo</h2>
-        <p class="lead">Garniture za vrt in teraso, izbrane po kakovosti materialov in udobju – z dostavo po vsej Sloveniji.</p>
+        <p class="lead">Garniture za vrt in teraso z dostavo po vsej Sloveniji. Plačilo s kartico ali po predračunu.</p>
       </div>
-      <a href="vrtno-pohistvo.html" class="link-arrow">Celotna kolekcija</a>
+      <a href="vrtno-pohistvo.html" class="btn">Vsi izdelki v trgovini</a>
     </div>
     <div id="shop-grid" class="pgrid-list home-shop" data-limit="3"></div>
   </div>
 </section>
 
 <!-- PO MERI -->
-<section id="po-meri" class="dark custom">
+<section id="storitve" class="dark custom">
   <div class="wrap custom-grid">
     <div class="custom-text">
-      <div class="eyebrow">Izdelano po meri</div>
-      <h2>Jeklo, oblikovano<br>za vaš prostor</h2>
+      <div class="eyebrow">Storitve po meri</div>
+      <h2>Izdelamo in zmontiramo<br>po vaši meri</h2>
       <p class="lead">Vsak projekt začnemo z ogledom in meritvami. Pred izdelavo prejmete 3D prikaz, nato izdelek izdelamo v naši delavnici in ga zmontiramo pri vas.</p>
       <ol class="custom-list">
         <li><img src="img/vrata.webp" alt="" loading="lazy"><div><h3>Dvoriščna in drsna vrata</h3><p>Krilna in drsna vrata, usklajena z ograjo, z avtomatiko ali brez.</p></div></li>
@@ -97,7 +103,7 @@
   <div class="wrap about-grid">
     <div class="rv">
       <div class="eyebrow">O nas</div>
-      <h2>Slovenska znamka<br>za bivanje na prostem</h2>
+      <h2>O STEELDOM</h2>
     </div>
     <div class="rv">
       <p class="lead-dark">STEELDOM združuje kovinarsko izkušnjo z občutkom za prostor. Izdelujemo jeklene konstrukcije po meri in izbiramo vrtno pohištvo, ki ga z veseljem postavimo tudi na svojo teraso.</p>
@@ -162,7 +168,7 @@
   <div class="wrap contact-grid">
     <div>
       <div class="eyebrow">Kontakt</div>
-      <h2>Pogovorimo se<br>o vašem prostoru</h2>
+      <h2>Kontakt</h2>
       <p class="lead">Opišite, kaj potrebujete – odgovorimo v najkrajšem času in se dogovorimo za brezplačen ogled.</p>
       <div class="contact-info">
         <a href="tel:+38670557514"><small>Telefon</small><span>+386 70 557 514</span></a>
@@ -201,7 +207,7 @@
     <div class="f-top">
       <a href="#" class="logo"><img src="img/logo.png" alt="STEELDOM" width="480" height="95"></a>
       <div class="f-links">
-        <a href="vrtno-pohistvo.html">Kolekcija</a><a href="#po-meri">Po meri</a><a href="#o-nas">O nas</a>
+        <a href="vrtno-pohistvo.html">Trgovina</a><a href="#storitve">Storitve po meri</a><a href="#o-nas">O nas</a>
         <a href="#vprasanja">Vprašanja</a><a href="#kontakt">Kontakt</a><a href="pogoji.html">Pogoji prodaje</a>
       </div>
     </div>
