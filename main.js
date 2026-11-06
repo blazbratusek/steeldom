@@ -56,6 +56,15 @@
     });
   }
 
+  // draw red bar under headings and dimension line when visible
+  var draw = document.querySelectorAll('h2, .dim');
+  if ('IntersectionObserver' in window) {
+    var io2 = new IntersectionObserver(function (en) {
+      en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add(e.target.tagName === 'H2' ? 'drawn' : 'on'); io2.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    draw.forEach(function (el) { io2.observe(el); });
+  } else { draw.forEach(function (el) { el.classList.add('drawn', 'on'); }); }
+
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
