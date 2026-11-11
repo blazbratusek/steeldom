@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /izdelek.html?p=primer-izdelka
+
+Sitemap: https://steeldom.si/sitemap.xml

@@ -90,6 +90,17 @@
       .finally(function () { btn.disabled = false; });
   });
 
+  // floating contact: show after scrolling past hero, hide near contact form
+  var fab = document.querySelector('.fab'), kontakt = document.getElementById('kontakt');
+  if (fab) {
+    var fabUpd = function () {
+      var past = window.scrollY > 500;
+      var nearForm = kontakt && kontakt.getBoundingClientRect().top < window.innerHeight * 0.8 && kontakt.getBoundingClientRect().bottom > 0;
+      fab.classList.toggle('show', past && !nearForm);
+    };
+    window.addEventListener('scroll', fabUpd, { passive: true }); fabUpd();
+  }
+
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
