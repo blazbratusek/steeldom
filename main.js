@@ -68,6 +68,80 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
+
+  // ---------- Hero: warm string lights + bokeh ----------
+  (function () {
+    var cv = document.getElementById('hero-glow');
+    if (!cv || !cv.getContext) return;
+    var ctx = cv.getContext('2d');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var W = 0, H = 0, dpr = 1, bulbs = [], bokeh = [], t = 0, run = true;
+    function setup() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var mob = W < 700;
+      // two sagging strands across the top
+      bulbs = [];
+      [[-0.05, 0.13, 1.05, 0.06, 0.09], [0.35, -0.02, 1.08, 0.24, 0.07]].forEach(function (s, k) {
+        if (mob && k === 1) return;
+        var n = mob ? 11 : 22;
+        for (var i = 0; i <= n; i++) {
+          var u = i / n, x = (s[0] + (s[2] - s[0]) * u) * W;
+          var y = (s[1] + (s[3] - s[1]) * u + s[4] * 4 * u * (1 - u)) * H;
+          bulbs.push({ x: x, y: y, ph: Math.random() * 6.28, sp: 0.6 + Math.random() * 0.8, s: k ? 0.8 : 1 });
+        }
+      });
+      bokeh = [];
+      var count = mob ? 9 : 18;
+      for (var b = 0; b < count; b++) {
+        bokeh.push({ x: Math.random() * W, y: H * (0.35 + Math.random() * 0.65), r: (mob ? 14 : 18) + Math.random() * (mob ? 28 : 46),
+          a: 0.05 + Math.random() * 0.09, dx: (Math.random() - 0.5) * 6, dy: -2 - Math.random() * 5, ph: Math.random() * 6.28 });
+      }
+    }
+    function strand() {
+      ctx.strokeStyle = 'rgba(255,255,255,.08)'; ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (var i = 0; i < bulbs.length; i++) {
+        var p = bulbs[i], q = bulbs[i - 1];
+        if (!q || Math.abs(p.x - q.x) > W / 6) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+    }
+    function frame(ts) {
+      var dt = 0.016; t += dt;
+      ctx.clearRect(0, 0, W, H);
+      bokeh.forEach(function (b) {
+        if (!reduce) { b.x += b.dx * dt; b.y += b.dy * dt; if (b.y < H * 0.2) { b.y = H + b.r; b.x = Math.random() * W; } }
+        var a = b.a * (0.7 + 0.3 * Math.sin(t * 0.6 + b.ph));
+        var g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+        g.addColorStop(0, 'rgba(255,190,110,' + a.toFixed(3) + ')');
+        g.addColorStop(0.6, 'rgba(255,160,80,' + (a * 0.5).toFixed(3) + ')');
+        g.addColorStop(1, 'rgba(255,150,60,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, 6.283); ctx.fill();
+      });
+      strand();
+      bulbs.forEach(function (p) {
+        var tw = reduce ? 0.85 : 0.72 + 0.28 * Math.sin(t * p.sp + p.ph);
+        var R = 16 * p.s;
+        var g = ctx.createRadialGradient(p.x, p.y + 3, 0, p.x, p.y + 3, R);
+        g.addColorStop(0, 'rgba(255,225,170,' + (0.75 * tw * p.s).toFixed(3) + ')');
+        g.addColorStop(0.25, 'rgba(255,170,80,' + (0.32 * tw * p.s).toFixed(3) + ')');
+        g.addColorStop(1, 'rgba(255,150,60,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p.x, p.y + 3, R, 0, 6.283); ctx.fill();
+        ctx.fillStyle = 'rgba(255,236,200,' + (0.9 * tw).toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(p.x, p.y + 3, 2.2 * p.s, 0, 6.283); ctx.fill();
+      });
+      if (run && !reduce) requestAnimationFrame(frame);
+    }
+    setup();
+    window.addEventListener('resize', function () { setup(); if (reduce) frame(0); });
+    if (reduce) { frame(0); return; }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) {
+      var v = en[0].isIntersecting; if (v && !run) { run = true; requestAnimationFrame(frame); } run = v;
+    }).observe(cv);
+    requestAnimationFrame(frame);
+  })();
   // ---------- Hero: interactive 3D wireframe of a steel structure ----------
   var cv = document.getElementById('hero-3d');
   if (!cv || !cv.getContext) return;

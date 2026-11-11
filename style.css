@@ -274,6 +274,11 @@ h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:4px;bac
 .nav a.nav-shop.on{color:#fff}
 /* hero: dark, no photo, 3D model */
 .hero{background:radial-gradient(ellipse 60% 70% at 75% 40%,#1d2025 0%,var(--dark) 70%);justify-content:center}
+.hero-warm{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse 55% 45% at 78% 100%,rgba(255,150,60,.22) 0%,rgba(255,120,40,.08) 45%,transparent 75%),
+  radial-gradient(ellipse 40% 35% at 15% 105%,rgba(255,170,90,.12) 0%,transparent 70%),
+  radial-gradient(ellipse 50% 40% at 70% 10%,rgba(255,190,120,.07) 0%,transparent 70%)}
+#hero-glow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-photo{position:absolute;inset:0;overflow:hidden}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;filter:saturate(.95) brightness(.68) contrast(1.05);transform:scale(1.04);animation:heroZoom 16s ease-out forwards}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,19,22,.88) 0%,rgba(18,19,22,.6) 42%,rgba(18,19,22,.1) 100%),linear-gradient(180deg,rgba(18,19,22,.35) 0%,transparent 30%,rgba(18,19,22,.85) 100%)}
@@ -333,7 +338,7 @@ section.dark>.wrap,footer>.wrap,.shop-hero>.wrap{position:relative}
 .dim::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.22)}
 .dim::after{content:"";position:absolute;inset:50% 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--bronze) 50%,transparent);opacity:0;transition:opacity 1.2s .4s}
 .hero .dim.on::after{opacity:.6}
-.dim span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#16181c;padding:0 14px;font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--dark-muted);white-space:nowrap}
+.dim span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:transparent;text-shadow:0 0 6px #121316;padding:0 14px;font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--dark-muted);white-space:nowrap}
 h2::after{transform:skewX(-20deg) scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.2,1) .15s}
 h2.drawn::after{transform:skewX(-20deg) scaleX(1)}
 .hero h1::after{transform-origin:left;animation:drawBar 1s cubic-bezier(.2,.7,.2,1) .3s both}
