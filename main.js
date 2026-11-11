@@ -65,6 +65,31 @@
     draw.forEach(function (el) { io2.observe(el); });
   } else { draw.forEach(function (el) { el.classList.add('drawn', 'on'); }); }
 
+
+  // Black Friday countdown
+  var cd = document.getElementById('countdown');
+  if (cd) {
+    var to = new Date(cd.getAttribute('data-to')).getTime();
+    var tick = function () {
+      var d = Math.max(0, to - Date.now()), s = Math.floor(d / 1000);
+      var v = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
+      cd.querySelectorAll('b').forEach(function (b) { var n = v[b.getAttribute('data-u')]; b.textContent = n < 10 ? '0' + n : n; });
+    };
+    tick(); setInterval(tick, 1000);
+  }
+  // Black Friday notify form
+  var bff = document.getElementById('bf-form');
+  if (bff) bff.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var out = document.getElementById('bf-msg'), btn = bff.querySelector('button');
+    btn.disabled = true; out.className = 'form-msg';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(bff) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d || !d.success) throw 0; out.className = 'form-msg ok'; out.textContent = 'Super! Obvestimo te, ko bo ponudba na voljo.'; bff.reset(); })
+      .catch(function () { out.className = 'form-msg err'; out.textContent = 'Prijava ni uspela. Piši nam na info@steeldom.si.'; })
+      .finally(function () { btn.disabled = false; });
+  });
+
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 

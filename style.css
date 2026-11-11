@@ -293,7 +293,8 @@ body.home .top.solid{top:0}
 .hero-deco span:nth-child(3){left:56%;width:3px;background:var(--bronze);opacity:.85}
 .hero-inner{pointer-events:none}
 .hero-inner a{pointer-events:auto}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.6rem);font-weight:900}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4.8rem);font-weight:900}
+.hero-text{max-width:860px}
 .hero h1::after{content:"";display:block;width:90px;height:6px;background:var(--bronze);transform:skewX(-20deg);margin-top:22px}
 .hero p{color:var(--dark-muted)}
 .path{background:#15171b;border-color:var(--dark-line)}
@@ -357,6 +358,62 @@ h2.drawn::after{transform:skewX(-20deg) scaleX(1)}
 .cl-img{aspect-ratio:16/10;overflow:hidden;margin-bottom:18px;background:var(--dark-2)}
 .cl-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.55) brightness(.72) contrast(1.05);transform:scale(1.02);transition:filter .45s,transform .7s cubic-bezier(.2,.7,.2,1)}
 .custom-list li:hover .cl-img img{filter:none;transform:scale(1.07)}
+
+/* ===== Marketing sections ===== */
+.nav a.nav-bf{color:#fff;background:var(--bronze);padding:6px 10px;font-weight:600}
+.top.solid .nav a.nav-bf,.sub .nav a.nav-bf{color:#fff}
+.bf{display:grid;grid-template-columns:1.1fr 1fr;padding:0;background:var(--dark);color:#e9eaec;min-height:620px}
+.bf-img{position:relative;overflow:hidden}
+.bf-img img{width:100%;height:100%;object-fit:cover}
+.bf-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--dark))}
+.bf-text{padding:90px 8% 90px 6%;align-self:center}
+.bf h2{color:#fff;font-size:clamp(2.4rem,5vw,4rem)}
+.bf .eyebrow{color:var(--bronze)}
+.bf .lead{color:var(--dark-muted)}
+.countdown{display:flex;gap:12px;margin:30px 0}
+.countdown div{min-width:74px;text-align:center;border:1px solid var(--dark-line);padding:12px 6px;background:#16181c}
+.countdown b{display:block;font-family:var(--serif);font-style:italic;font-weight:800;font-size:2rem;color:#fff;line-height:1}
+.countdown span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dark-muted)}
+.bf-form{display:flex;gap:0;max-width:460px}
+.bf-form input[type=email]{background:#16181c;border:1px solid var(--dark-line);color:#fff;flex:1}
+.bf-form .btn{white-space:nowrap}
+.bf .consent{margin-top:12px;color:var(--dark-muted)}
+.bf .consent a{color:#c9ccd1}
+#bf-msg{margin-top:12px;max-width:460px}
+.insp{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:22px;margin-top:50px;height:720px}
+.insp-card{position:relative;display:block;overflow:hidden;color:#fff;text-decoration:none;background:var(--dark)}
+.insp-card.big{grid-row:span 2}
+.insp-card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.insp-card:hover img{transform:scale(1.05)}
+.insp-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,11,13,.85))}
+.insp-txt{position:absolute;left:28px;right:28px;bottom:26px;z-index:1}
+.insp-txt span{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#ffb3b6}
+.insp-txt h3{color:#fff;font-size:1.5rem;margin:6px 0 6px}
+.insp-txt p{font-size:.92rem;color:rgba(255,255,255,.82)}
+.values{grid-template-columns:repeat(3,1fr)}
+@media (max-width:640px){.values{grid-template-columns:1fr}}
+@media (max-width:980px){
+  .bf{grid-template-columns:1fr;min-height:0}
+  .bf-img{height:340px}
+  .bf-img::after{background:linear-gradient(180deg,transparent 55%,var(--dark))}
+  .bf-text{padding:40px 32px 70px}
+  .insp{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
+  .insp-card{aspect-ratio:4/3}
+  .insp-card.big{grid-row:auto;grid-column:span 2;aspect-ratio:16/10}
+  .nav a.nav-bf{width:auto!important;margin-top:4px}
+}
+@media (max-width:640px){
+  .bf-img{height:260px}
+  .bf-text{padding:30px 22px 60px}
+  .countdown div{min-width:0;flex:1}
+  .countdown b{font-size:1.6rem}
+  .bf-form{flex-direction:column;gap:10px}
+  .insp{grid-template-columns:1fr;gap:14px}
+  .insp-card,.insp-card.big{grid-column:auto;aspect-ratio:4/3}
+  .insp-txt{left:20px;right:20px;bottom:18px}
+  .insp-txt h3{font-size:1.25rem}
+}
+
 @media (prefers-reduced-motion:reduce){h2::after{transform:skewX(-20deg);transition:none}.hero h1::after{animation:none;transform:skewX(-20deg)}}
 
 @media (max-width:980px){
