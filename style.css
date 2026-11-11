@@ -280,8 +280,12 @@ h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:4px;bac
   radial-gradient(ellipse 50% 40% at 70% 10%,rgba(255,190,120,.07) 0%,transparent 70%)}
 #hero-glow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-photo{position:absolute;inset:0;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;filter:saturate(.95) brightness(.68) contrast(1.05);transform:scale(1.04);animation:heroZoom 16s ease-out forwards}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,19,22,.88) 0%,rgba(18,19,22,.6) 42%,rgba(18,19,22,.1) 100%),linear-gradient(180deg,rgba(18,19,22,.35) 0%,transparent 30%,rgba(18,19,22,.85) 100%)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:brightness(.9);transform:scale(1.04);animation:heroZoom 16s ease-out forwards}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,14,20,.78) 0%,rgba(12,14,20,.45) 40%,rgba(12,14,20,0) 70%),linear-gradient(180deg,rgba(18,19,22,.35) 0%,transparent 30%,rgba(18,19,22,.85) 100%)}
+.trustbar{position:relative;z-index:60;background:#0b0c0e;color:#c9ccd1;font-size:.74rem;letter-spacing:.08em;text-align:center;padding:8px 0}
+.trustbar i{font-style:normal;color:var(--bronze);margin:0 10px}
+body.home .top{top:33px}
+body.home .top.solid{top:0}
 .hero-deco{position:absolute;top:0;bottom:0;right:-6%;width:46%;pointer-events:none}
 .hero-deco span{position:absolute;top:-10%;bottom:-10%;transform:skewX(-20deg);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
 .hero-deco span:nth-child(1){left:8%;width:22%}
@@ -404,7 +408,11 @@ h2.drawn::after{transform:skewX(-20deg) scaleX(1)}
   .custom-list h3{font-size:1rem}
   .hero{justify-content:flex-end}
   .hero-deco{width:70%;right:-30%;opacity:.5}
-  .hero-photo img{object-position:62% 50%}
+  .trustbar{font-size:.62rem;letter-spacing:.04em;padding:7px 0;white-space:nowrap;overflow:hidden}
+  .trustbar i{margin:0 5px}
+  .trustbar .tb-x{display:none}
+  body.home .top{top:29px}
+  .hero-photo img{object-position:68% 50%}
   .hero-photo::after{background:linear-gradient(180deg,rgba(18,19,22,.55) 0%,rgba(18,19,22,.6) 45%,rgba(18,19,22,.92) 100%)}
   #hero-3d{height:300px}
   .values{grid-template-columns:1fr;gap:26px}
