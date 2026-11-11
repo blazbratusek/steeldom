@@ -43,6 +43,6 @@ window.STEELDOM_PRODUCTS = [
     delivery: "4–6 tednov",
     shipping: "Dostava po Sloveniji vključena v ceno.",
     stripeLink: "",
-    draft: false
+    draft: true
   }
 ];
