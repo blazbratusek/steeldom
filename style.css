@@ -281,7 +281,7 @@ h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:4px;bac
 #hero-glow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-photo{position:absolute;inset:0;overflow:hidden}
 .hero-draw{position:absolute;right:max(2%,calc((100vw - 1200px)/2 - 40px));top:96px;width:min(46vw,640px);height:auto;pointer-events:none}
-.hero{background:radial-gradient(ellipse 55% 60% at 72% 48%,#20242a 0%,#121316 72%)}
+.hero{background:radial-gradient(ellipse 70% 80% at 85% 20%,#1d2025 0%,#121316 65%)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:brightness(.9);transform:scale(1.04);animation:heroZoom 16s ease-out forwards}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,14,20,.78) 0%,rgba(12,14,20,.45) 40%,rgba(12,14,20,0) 70%),linear-gradient(180deg,rgba(18,19,22,.35) 0%,transparent 30%,rgba(18,19,22,.85) 100%)}
 .trustbar{position:relative;z-index:60;background:#0b0c0e;color:#c9ccd1;font-size:.74rem;letter-spacing:.08em;text-align:center;padding:8px 0}
