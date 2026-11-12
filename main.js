@@ -1,4 +1,11 @@
 (function () {
+  var L = (document.documentElement.lang || 'sl').slice(0, 2);
+  var MSG = {
+    sl: { sending: 'Pošiljam …', ok: 'Hvala! Vaše sporočilo smo prejeli in se vam oglasimo v najkrajšem času.', err: 'Sporočila ni bilo mogoče poslati. Pišite nam na info@steeldom.si ali pokličite +386 70 557 514.', send: 'Pošlji sporočilo' },
+    de: { sending: 'Wird gesendet …', ok: 'Vielen Dank! Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich.', err: 'Die Nachricht konnte nicht gesendet werden. Schreiben Sie an info@steeldom.si oder rufen Sie +386 70 557 514 an.', send: 'Nachricht senden' },
+    en: { sending: 'Sending …', ok: 'Thank you! We have received your message and will get back to you shortly.', err: 'The message could not be sent. Write to info@steeldom.si or call +386 70 557 514.', send: 'Send message' }
+  }[L] || null;
+  if (!MSG) MSG = { sending: 'Pošiljam …', ok: 'Hvala!', err: 'Napaka.' };
   // Header background on scroll
   var top = document.querySelector('.top');
   function onScroll() { if (top && !document.body.classList.contains('sub')) top.classList.toggle('solid', window.scrollY > 60); }
@@ -38,21 +45,21 @@
       var btn = form.querySelector('button[type=submit]');
       out.className = 'form-msg';
       btn.disabled = true;
-      btn.textContent = 'Pošiljam …';
+      var orig = btn.textContent; btn.textContent = MSG ? MSG.sending : 'Pošiljam …';
       fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           if (d && d.success) {
             out.className = 'form-msg ok';
-            out.textContent = 'Hvala! Vaše sporočilo smo prejeli in se vam oglasimo v najkrajšem času.';
+            out.textContent = MSG.ok;
             form.reset();
           } else { throw new Error(); }
         })
         .catch(function () {
           out.className = 'form-msg err';
-          out.textContent = 'Sporočila ni bilo mogoče poslati. Pišite nam na info@steeldom.si ali pokličite +386 70 557 514.';
+          out.textContent = MSG.err;
         })
-        .finally(function () { btn.disabled = false; btn.textContent = 'Pošlji povpraševanje'; });
+        .finally(function () { btn.disabled = false; btn.textContent = orig; });
     });
   }
 

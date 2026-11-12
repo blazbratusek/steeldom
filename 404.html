@@ -44,7 +44,8 @@
     '/pogoji':'/pogoji.html', '/dostava':'/dostava.html'
   };
   var to = map[p];
-  if (!to && (p === '/de' || p.indexOf('/de/') === 0 || p === '/en' || p.indexOf('/en/') === 0)) to = '/';
+  if (!to && p.indexOf('/de/') === 0) to = '/de/';
+  if (!to && p.indexOf('/en/') === 0) to = '/en/';
   if (!to && (p.indexOf('/projekti/') === 0 || p.indexOf('/projects/') === 0 || p.indexOf('/modeli/') === 0)) to = '/#storitve';
   if (to) location.replace(to);
 })();
